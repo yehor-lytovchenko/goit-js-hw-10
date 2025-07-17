@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-B9kkWxtF.css">
+  <script type="module" crossorigin src="/goit-js-hw-10/1-timer.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbSUbo7J.js">
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-C1gPI-5C.css">
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-CEq9a8o0.css">
 </head>
 
 <body>
-    <input type="text" id="datetime-picker" />
-    <button type="button" data-start>Start</button>
+    <div class="input-wrapper">
+        <input class="input" type="text" id="datetime-picker" />
+        <button class="timer-button timer-button-disable" type="button" data-start>Start</button>
+    </div>
+
 
     <div class="timer">
         <div class="field">
