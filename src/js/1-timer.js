@@ -59,6 +59,7 @@ function startTimer() {
     if (diff <= 0) {
       clearInterval(intervalId);
       updateTimer(0, 0, 0, 0);
+      refs.inputEl.disabled = false;
       return;
     }
 
