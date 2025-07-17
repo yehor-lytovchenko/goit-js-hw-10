@@ -26,7 +26,6 @@ function createPromise(delay, state) {
 
 function showSucces(delay) {
   iziToast.success({
-    title: 'OK',
     message: `✅ Fulfilled promise in ${delay}ms`,
     position: 'topRight',
   });
@@ -34,7 +33,6 @@ function showSucces(delay) {
 
 function showError(delay) {
   iziToast.error({
-    title: 'Error',
     message: `❌ Rejected promise in ${delay}ms`,
     position: 'topRight',
   });

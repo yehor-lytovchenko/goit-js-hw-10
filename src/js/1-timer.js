@@ -12,6 +12,8 @@ const refs = {
   seconds: document.querySelector('[data-seconds]'),
 };
 
+refs.startBtn.disabled = true;
+
 let selectedDate = null;
 let intervalId = null;
 
@@ -30,22 +32,26 @@ flatpickr(refs.inputEl, {
         title: '❌',
         message: 'Please choose a date in the future',
         position: 'topRight',
+        icon: '',
       });
-      refs.startBtn.classList.add('timer-button-disable');
+      refs.startBtn.disabled = true;
     } else {
-      refs.startBtn.classList.remove('timer-button-disable');
+      refs.startBtn.disabled = false;
     }
   },
 });
 
 refs.startBtn.addEventListener('click', () => {
-  if (refs.startBtn.classList.contains('timer-button-disable')) return;
-
-  startTimer();
+  if (refs.startBtn.disabled) return;
+  else {
+    return startTimer();
+  }
 });
 
 function startTimer() {
-  refs.startBtn.classList.add('timer-button-disable');
+  refs.startBtn.disabled = true;
+  refs.inputEl.disabled = true;
+
   intervalId = setInterval(() => {
     const now = new Date();
     const diff = selectedDate - now;

@@ -30,11 +30,10 @@
     color: #000;
 }
 
-.is-disable-form {
-    border-color: #808080;
+#datetime-picker:disabled {
+    background: #fafafa;
     color: #808080;
-    background-color: #fafafa;
-
+    cursor: not-allowed;
 }
 
 .timer-button {
@@ -57,14 +56,13 @@
     background: #6c8cff;
 }
 
-.timer-button-disable {
+.timer-button:disabled,
+.timer-button:disabled:hover,
+.timer-button:disabled:focus,
+.timer-button:disabled:active {
     background: #cfcfcf;
     color: #989898;
-}
-
-.timer-button-disable:hover {
-    background: #cfcfcf;
-    cursor: default;
+    cursor: not-allowed;
 }
 
 .timer {
