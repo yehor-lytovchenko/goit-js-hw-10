@@ -32,3 +32,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.home-link {
+  margin-bottom: 16px;
+  display: block
+}
